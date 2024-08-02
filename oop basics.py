@@ -142,7 +142,7 @@ class User:
     def __init__(self,user_name,password):
           self.user_name= user_name          # here we putting the none for initialization because  here we creating a blueprint not for a particular person .
           self.password= password           #  we can provide  a any valid data like float,integer,tuple,dictionary 
-                                            # instance variable .related to object
+                                            # instance variable  related to object
     
     def register(self):
         print("Registering......."+ self.user_name)
@@ -179,3 +179,5 @@ user1=User("deepak","deepak2099")
 user2=User("ram","ram2098")
 user1.register()
 print(User.users)    # here we accessing the class variable 
+
+

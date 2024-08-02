@@ -46,3 +46,5 @@ class user:
  
 o=user()
 o.greet().login().register()     # here we gives the several methods in a single line 
+
+                                 #here we want acces those methods in a single line thats why we give the return self ..
