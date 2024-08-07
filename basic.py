@@ -57,5 +57,5 @@ print("this is the file ",file=file1)
 file1.close()
   
 name="deepak"
-print("name is ",name)
+print("name is " +name)
   

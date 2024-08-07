@@ -3,6 +3,7 @@
 a=39.3
 print(type(a))  # here we converting the float type to integer 
 b=int(a)
+print(b)
 print(type(b))
 
 c=3
@@ -22,6 +23,7 @@ print(type(d))
 x=29
 y=3
 c=x+y
+c="hi"
 print("total :",c)
 
 x=29
@@ -34,7 +36,7 @@ print("total : " +  str(c))
 
 # string with numbers values can convert into int , float
 # integer can convert into float , string
-# float can convert into string only .
+# float can convert into string ,integer
 
 # string converted into integer
 value ='35'
