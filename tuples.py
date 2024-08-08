@@ -1,6 +1,6 @@
 #immutable 
 # sorounded by the parenthesis .its similiar to list 
-#
+
 
 
 tuple=(2,'welcome',0.6)
@@ -28,6 +28,8 @@ example=(1,3,'python',0.3)
 print(example)
 print(len(example))
 del example          # to delete the tuple 
+
+
 
 example=(1,3,'python',0.3)
 x=(2,3)                      # concatenation of two tuple
