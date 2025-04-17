@@ -29,6 +29,27 @@ o2=teacher()
 o2.greet()
 
 
+
+# Duck Typing (Another Form of Polymorphism)
+class Bird:
+    def fly(self):
+        print("Bird is flying.")
+
+class Airplane:
+    def fly(self):
+        print("Airplane is flying.")
+
+def takeoff(obj):
+    obj.fly()  # As long as 'fly()' is defined, it works!
+
+takeoff(Bird())       # ✅ Bird is flying
+takeoff(Airplane())   # ✅ Airplane is flying
+
+
+
+
+
+
 #method chaining
 
 
