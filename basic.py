@@ -1,5 +1,7 @@
 '''#/n--new line
 
+//in python there is no concept of primitive and non primitive data types ...all data types considered as objects 
+
 print("hello world")
 a=10
 b=20
@@ -11,10 +13,12 @@ print(id(a))# it memory location...memory location can be depends on the values.
 
 #keyword
 # keyword are reserved words.they are cannot be used as variable name ,function name or identifier.case sensitive
-# 36 keywords
+# 35 keywords
 
     import keyword
     print(keyword.kwlist)
+
+    ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
 
     #getting inputs from user
     name=input("enter your name :") #normally the input statement specifies the string datatype
@@ -58,4 +62,76 @@ file1.close()
   
 name="deepak"
 print("name is " +name)
+
+
+-----------------------------------------------------Data types------------------------------------
+
+
+1.Numeric Types
+
+int → integers
+
+float → decimals
+
+complex → complex numbers
+
+a = 10          # int
+b = 3.14        # float
+c = 2 + 3j      # complex
+
+2. Sequence Types
+
+str → string
+
+list → ordered, mutable collection
+
+tuple → ordered, immutable collection
+
+text = "Hello"            # string
+nums = [1, 2, 3]          # list
+coords = (10, 20)         # tuple
+
+3. Set Types
+
+set → unordered collection of unique elements
+
+frozenset → immutable set
+
+s = {1, 2, 3, 2}          # {1, 2, 3}
+fs = frozenset([1, 2, 3]) # immutable
+
+4. Mapping Type
+
+dict → key-value pairs
+
+student = {"id": 101, "name": "Deepak", "cgpa": 9.0}
+
+5. Boolean Type
+
+bool → True or False
+
+is_active = True
+is_admin = False
+
+6. None Type
+
+None → represents null/empty value
+
+x = None
+
+🔍 Checking Data Type
+
+Use type() function:
+
+print(type(10))         # <class 'int'>
+print(type(3.14))       # <class 'float'>
+print(type("Deepak"))   # <class 'str'>
+print(type([1, 2, 3]))  # <class 'list'>
+
+
+
+
+
+
+
   
