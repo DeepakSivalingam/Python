@@ -31,6 +31,9 @@ s="deepak2004"
 print("isalpha:",s.isalpha())
 print("isalphanumeric:",s.isalnum())
 print("isdigit: ",s.isdigit())
+print("istitle : " ,s.istitle())
+string="   " 
+print(string.isspace())
 
 y="    hello  "
 print(len(y.strip()))  # strip used for remove the unwanted white spaces
@@ -55,3 +58,19 @@ print(example[:-1])
 print(example[::-1]) #for reversing the string 
 print(example[-2:])
 print(example[2]) 
+print(example[0::2])
+
+
+
+#formatting
+name="deepak"
+age=21
+print(f"my name is {name} and my age is {age}")
+
+
+
+print(name.encode())
+n="hii"
+c=n.encode()
+print(c.decode())
+
