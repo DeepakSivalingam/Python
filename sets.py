@@ -32,21 +32,29 @@ print(y)
 y.clear()    # to clear the all values in the set 
 print(y)
 
-# union 
+# union  |
 a={2,0.2,5,8,'set'}
 b={0,'union'}      #its similiar to update 
 print(a.union(b))
 
-#intersection 
+#intersection   &
 x={1,2,3,4,5,6}
 y={5,6,7,8,9,10}
 print(x.intersection(y))
 
 #symmetric_difference.
-x={1,2,3,4,5,6}
+x={1,2,3,4,5,6}    ^
 y={5,6,7,8,9,10}
 print(x.symmetric_difference(y))
 
+print(x-y)   #it removes the elements of y that present in the x and returns x 
+
 print(x.isdisjoint(y))
-print(x.issubset(y))
+print(x.issubset(y))  #<=
+
+
+# Reading a set from user
+sets=set(map(int,input("enter values : ").split("")))
+for i in sets:
+    print(i)
 
