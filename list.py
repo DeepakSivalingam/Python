@@ -37,6 +37,7 @@ print(len(list))  # return the length of the list
 list2=[2,0.8,2,2,8,9.3]
 print(max(list2))   # return the maximum and minimum value in the list 
 print(min(list2))
+print(sum(list2))
 
 list2=[2,0.8,2,2,8,9.3]
 list2.pop(0) # remove the values in the list based on the index position 
