@@ -52,6 +52,34 @@ except Exception as e:
         print(f.read())
         
 
+
+# ARRAYS ---------------------------------------------
+
+import array
+arr=array.array('i',[5,3,9,1,6])
+print(len(arr))
+
+arr.append(2)
+arr.insert(2,8484)
+
+arr.pop([4])
+arr.remove(3)
+
+arr.extend([8789,242,42444])
+
+arr3=[]
+print(arr3.fromlist([323,45454,555])
+
+print(arr.tolist())
+
+arr.index(1)
+
+arr.reverse()
+
+arr.count(555)
+
+
+
  
     
     
