@@ -126,3 +126,139 @@ while(start<end):
 print(arr)
 
 
+# linear search
+
+list=[78535,535,2,7,5]
+x=2
+found=False
+for num in list:
+    if num==x:
+        print(list.index(num))
+        found=True
+if not found:
+    print("index not found ")
+    
+#binary search 
+
+list=[78535,535,2,7,5]
+list.sort()
+
+key=5
+start=0
+end=len(list)-1
+ 
+def binary(list,start,end,key):
+     mid=(start+end)//2
+     
+     if(list[mid]==key):
+         print("index is found ",mid)
+     elif(key<list[mid]):
+         binary(list,start,mid-1,key)
+     elif(key>list[mid]):
+         binary(list,mid+1,end,key)
+     else:
+         print("index is not found ")
+
+binary(list,start,end,key)
+
+
+#bubble sort
+
+list=[384976,3,3434,1,234]
+
+def bubblesort(list):
+    n=len(list)
+    for i in range(n):
+        swapped=False
+        for j in range(0,n-i-1):
+            if(list[j]>list[j+1]):
+                list[j],list[j+1]=list[j+1],list[j]
+                swapped=True
+        if not swapped:
+            break
+    return list
+
+print(bubblesort(list))
+        
+
+#selection sort
+
+list=[384976,3,3434,1,234]
+
+def selectionsort(list):
+    n=len(list)
+    for i in range(n):
+        minindex=i
+        for j in range(i+1,n):
+            if list[j]<list[minindex]:
+                minindex=j
+
+        temp=list[i]
+        list[i]=list[minindex]
+        list[minindex]=temp
+    print(list)
+
+selectionsort(list)
+
+
+#reverse a number 
+num=567
+reversed=0
+while(num>0):
+    x=num%10
+    reversed=(reversed*10)+x
+    num//=10
+print(reversed)
+
+
+
+
+#armstrong number 
+
+num = 15
+original = num   # keep a copy
+count = 0
+sumofnumber = 0
+
+# Count digits
+temp = num
+while temp > 0:
+    count += 1
+    temp //= 10
+
+# Calculate sum of digits raised to 'count'
+temp = num
+while temp > 0:
+    x = temp % 10
+    sumofnumber += x ** count
+    temp //= 10
+
+# Compare with original number
+if original == sumofnumber:
+    print("Armstrong")
+else:
+    print("Not an Armstrong")
+
+
+
+#anagaram
+
+from itertools import permutations
+
+def is_anagram_bruteforce(s1, s2):
+    # Step 1: If lengths are not same, they can't be anagrams
+    if len(s1) != len(s2):
+        return False
+    
+    # Step 2: Generate all permutations of s1
+    for perm in permutations(s1):
+        # Step 3: Convert tuple (e.g., ('l','i','s','t','e','n')) to string
+        if ''.join(perm) == s2:
+            return True
+    
+    # Step 4: If no match found, return False
+    return False
+
+# Example usage
+print(is_anagram_bruteforce("listen", "silent"))  # True
+print(is_anagram_bruteforce("hello", "bello"))    # False
