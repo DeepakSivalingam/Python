@@ -262,3 +262,151 @@ def is_anagram_bruteforce(s1, s2):
 # Example usage
 print(is_anagram_bruteforce("listen", "silent"))  # True
 print(is_anagram_bruteforce("hello", "bello"))    # False
+
+
+
+#automorphic number 
+
+num=int(input("enter the number "))
+square =num*num
+
+if(str(square).endswith(str(num))):
+    print("automorphic number ")
+else:
+    print("not an automorphic number ")
+
+
+#binary to decimal 
+
+# Convert binary to decimal using int() function
+binary = input("Enter a binary number: ")
+decimal = int(binary, 2)
+print(f"Decimal equivalent: {decimal}")
+
+or
+
+# Convert binary to decimal manually
+binary = input("Enter a binary number: ")
+decimal = 0
+power = 0
+
+# Start from the rightmost digit
+for digit in reversed(binary):
+    decimal += int(digit) * (2 ** power)
+    power += 1
+
+print(f"Decimal equivalent: {decimal}")
+
+
+#decimal to binary 
+
+# Convert decimal to binary using bin()
+decimal = int(input("Enter a decimal number: "))
+binary = bin(decimal)[2:]  # [2:] removes the '0b' prefix
+print(f"Binary equivalent: {binary}")
+
+or 
+
+# Convert decimal to binary manually
+decimal = int(input("Enter a decimal number: "))
+binary = ""
+
+if decimal == 0:
+    binary = "0"
+else:
+    while decimal > 0:
+        remainder = decimal % 2
+        binary = str(remainder) + binary  # prepend remainder
+        decimal //= 2
+
+print(f"Binary equivalent: {binary}")
+
+
+# check valid binary number 
+
+binary_str = '1010101089710'
+flag = True  # Assume it is binary unless proven otherwise
+
+for i in binary_str:
+    if i != '0' and i != '1':  # Check if any character is not 0 or 1
+        flag = False
+        break  # No need to check further if an invalid digit is found
+
+if flag:
+    print("Valid binary number")
+else:
+    print("Not a valid binary number")
+
+
+#duck number 
+
+num=input("enter the number ")
+duck=False
+for i in num:
+    if i=='0' and ( not num.startswith('0')):
+        duck=True
+
+if(duck):
+    print("duck number ")
+else:
+    print("not a duck number ")
+
+
+#happy number 
+
+def is_happy(num):
+    seen = set()  # to detect cycles
+
+    while num != 1 and num not in seen:
+        seen.add(num)
+        num = sum(int(digit) ** 2 for digit in str(num))
+
+    return num == 1
+
+
+# Driver code
+n = int(input("Enter a number: "))
+if is_happy(n):
+    print(f"{n} is a Happy Number")
+else:
+    print(f"{n} is not a Happy Number")
+
+
+#harshad number 
+num=int(input("enter the number "))
+sum=0
+nums=num
+while num>0:
+    temp=num%10
+    sum+=temp
+    num//=10
+
+if(nums % sum==0):
+    print("harshad number ")
+else:
+    print("not a harshad number ")
+
+
+
+#magic number 
+
+def is_magic(num):
+    while num > 9:  # repeat until we get a single digit
+        s = 0
+        while num > 0:
+            s += num % 10  # add last digit
+            num //= 10      # remove last digit
+        num = s  # assign the sum back to num
+    
+    return num == 1
+
+
+# Driver code
+n = int(input("Enter a number: "))
+if is_magic(n):
+    print(f"{n} is a Magic Number")
+else:
+    print(f"{n} is not a Magic Number")
+
+
+
